@@ -288,9 +288,9 @@ $ratio: 675px/1000px;
 
 		animation-name: scott;
     animation-play-state:running;
-		animation-duration: 2s;
+		animation-duration: 1.5s;
 		animation-iteration-count: 1;
-		animation-direction: reverse;
+		animation-direction: normal;
 	}
 	.pilgrim{
 		position: absolute;
@@ -301,9 +301,9 @@ $ratio: 675px/1000px;
 
 		animation-name: pilgrim;
     animation-play-state:running;
-		animation-duration: 2s;
+		animation-duration: 1.7s;
 		animation-iteration-count: 1;
-		animation-direction: alternate-reverse;
+		animation-direction: normal;
 	}
 
 	.versus{
