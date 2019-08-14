@@ -25,20 +25,225 @@ body {
 }
 
 @keyframes scott {
-	0% {
-		top: 0px;
-		left: 0px;
-	}
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
-	50% {
-		top: 100px;
-		bottom: 100px;
-	}
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
 
-	100% {
-		top: 0px;
-		bottom: 50px;
-	}
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pilgrim {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes versus {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: skewX(-5deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes the {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: skewX(-5deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes world {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: skewX(-5deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes big-star {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes small-star {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scott-star-1 {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scott-star-2 {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+@keyframes small-star-2 {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /*
@@ -55,7 +260,7 @@ body {
 // calculate the ratio of your poster and put it here
 $ratio: 675px/1000px;
 
-.poster {
+.poster{
 	position: absolute;
 	height: 90vh;
 	width: 90vh * $ratio;
@@ -69,18 +274,11 @@ $ratio: 675px/1000px;
 	box-shadow: 0 20px 30px rgba(0,0,0,0.3);
 
 	// temporary background image just for help positioning during development
-	background-image: url("../img/ScottPilgrimDesign.jpg");
+
+	background-image: url("../img/MV5BMTkwNTczNTMyOF5BMl5BanBnXkFtZTcwNzUxOTUyMw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg");
 	background-size: contain;
 
 	// put all elements in the poster, like this, with % for sizing and positioning.
-	.pilgrim{
-		position: absolute;
-		width: 47%;
-	    top: 7.4%;
-	    right: 4.4%;
-		transform: rotate(-3.8deg) skewY(1.3deg);
-	}
-
 	.scott{
 		position: absolute;
 		width: 42.8%;
@@ -88,9 +286,36 @@ $ratio: 675px/1000px;
 		left: 4.2%;
 		transform: rotate(0.5deg) skewY(5.5deg);
 
-		// animation-name: scott;
-		animation-duration: 1s, 0.8s;
-		animation-iteration-count: infinite;
+		animation-name: scott;
+    animation-play-state:running;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+		animation-direction: reverse;
+	}
+	.pilgrim{
+		position: absolute;
+		width: 47%;
+	    top: 7.4%;
+	    right: 4.4%;
+		transform: rotate(-3.8deg) skewY(1.3deg);
+
+		animation-name: pilgrim;
+    animation-play-state:running;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+		animation-direction: alternate-reverse;
+	}
+
+	.versus{
+		position: absolute;
+		width: 9.8%;
+		top: 22.6%;
+		left: 30.6%;
+
+		animation-name: versus;
+    animation-play-state:running;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
 		animation-direction: normal;
 	}
 
@@ -100,21 +325,10 @@ $ratio: 675px/1000px;
 		top: 21%;
 		left: 41.4%;
 
-		// animation-name: the;
-		animation-duration: 1s, 0.8s;
-		animation-iteration-count: infinite;
-		animation-direction: normal;
-	}
-
-	.versus{
-		position: absolute;
-		width: 9.8%;
-		top: 22.6%;
-		left: 30.6%;
-
-		// animation-name: versus;
-		animation-duration: 1s, 0.8s;
-		animation-iteration-count: infinite;
+		animation-name: the;
+    animation-play-state:running;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
 		animation-direction: normal;
 	}
 
@@ -124,9 +338,10 @@ $ratio: 675px/1000px;
 		top: 21.7%;
 		left: 56%;
 		
-		// animation-name: world;
-		animation-duration: 1s, 0.8s;
-		animation-iteration-count: infinite;
+		animation-name: world;
+    animation-play-state:running;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
 		animation-direction: normal;
 	}
 
@@ -136,10 +351,11 @@ $ratio: 675px/1000px;
 		top: 48.8%;
 		left: 63.4%;
 
-		// animation-name: big-star;
-		animation-duration: 1s, 0.8s;
+		animation-name: big-star;
+    animation-play-state:running;
+		animation-duration: 1s;
 		animation-iteration-count: infinite;
-		animation-direction: normal;
+		animation-direction: reverse;
 	}
 
 	.small-star{
@@ -148,10 +364,11 @@ $ratio: 675px/1000px;
 		top: 51.1%;
 		left: 56.1%;
 
-		// animation-name: small-star;
-		animation-duration: 1s, 0.8s;
+		animation-name: small-star;
+    animation-play-state:running;
+		animation-duration: 1s;
 		animation-iteration-count: infinite;
-		animation-direction: normal;
+		animation-direction: reverse;
 	}
 
 	.scott-star-1{
@@ -160,10 +377,11 @@ $ratio: 675px/1000px;
 		top: 39.2%;
 		left: 33.2%;
 
-		// animation-name: scott-star-1;
-		animation-duration: 1s, 0.8s;
+		animation-name: scott-star-1;
+    animation-play-state:running;
+		animation-duration: 1s;
 		animation-iteration-count: infinite;
-		animation-direction: normal;
+		animation-direction: reverse;
 	}
 	.scott-star-2{
 		position: absolute;
@@ -171,10 +389,11 @@ $ratio: 675px/1000px;
 		top: 34.4%;
 		left: 35.8%;
 
-		// animation-name: scott-star-2;
-		animation-duration: 1s, 0.8s;
+		animation-name: scott-star-2;
+    animation-play-state:running;
+		animation-duration: 1s;
 		animation-iteration-count: infinite;
-		animation-direction: normal;
+		animation-direction: reverse;
 	}
 
 	.small-star-2{
@@ -184,10 +403,11 @@ $ratio: 675px/1000px;
 		left: 50.6%;
 
 
-		// animation-name: small-star-2;
-		animation-duration: 1s, 0.8s;
+		animation-name: small-star-2;
+    animation-play-state:running;
+		animation-duration: 1s;
 		animation-iteration-count: infinite;
-		animation-direction: normal;
+		animation-direction: alternate;
 	
 	}
 
